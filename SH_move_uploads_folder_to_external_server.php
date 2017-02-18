@@ -41,7 +41,7 @@ function sh_move_uploads_folder_to_external_server( $args ) {
 
 	$settings = array(
 
-		'host'	  =>  SH_UPLOADS_FTP_SERVER_IP_OR_HOSTNAME, // * the ftp-server hostname, ie:
+		'host'	  =>  SH_UPLOADS_FTP_SERVER_IP_OR_HOSTNAME, // * the ftp-server hostname or IP, ie:
 		'port'    =>  SH_UPLOADS_FTP_SERVER_PORT,           // * the ftp-server port (of type int), ie: 21
 		'user'	  =>  SH_UPLOADS_FTP_SERVER_USERNAME,       // * ftp-user, ie: 'username'
 		'pass'	  =>  SH_UPLOADS_FTP_SERVER_PASSWORD,	    // * ftp-password, ie: password'
