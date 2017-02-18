@@ -37,7 +37,7 @@ function sh_move_uploads_folder_to_external_server( $args ) {
 		exit("constants for external uploads server are undefined");
 	
 	// create default value - this optional param need not be custom-defined in wp-config
-	defined(SH_UPLOADS_FTP_SERVER_DOMAIN_NAME) or define(SH_UPLOADS_FTP_SERVER_DOMAIN_NAME, '/')
+	defined(SH_UPLOADS_FTP_SERVER_DOMAIN_NAME) or define(SH_UPLOADS_FTP_SERVER_DOMAIN_NAME, '/');
 
 	$settings = array(
 
