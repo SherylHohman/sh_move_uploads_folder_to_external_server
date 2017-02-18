@@ -29,7 +29,7 @@ function sh_move_uploads_folder_to_external_server( $args ) {
 	// 170216 SH: Define these constants in wp-config.php for security
         // EXIT out of this function if any of these constants NOT defined
 	
-	if (!defined(SH_UPLOADS_FTP_SERVER_HOSTNAME) or 
+	if (!defined(SH_UPLOADS_FTP_SERVER_IP_OR_HOSTNAME) or 
 	   !defined(SH_UPLOADS_FTP_SERVER_PORT) or 
 	   !defined(SH_UPLOADS_FTP_SERVER_USERNAME) or 
 	   !defined(SH_UPLOADS_FTP_SERVER_PASSWORD) or
@@ -41,14 +41,14 @@ function sh_move_uploads_folder_to_external_server( $args ) {
 
 	$settings = array(
 
-		'host'	  =>  SH_UPLOADS_FTP_SERVER_HOSTNAME,     // * the ftp-server hostname, ie:
-		'port'    =>  SH_UPLOADS_FTP_SERVER_PORT,         // * the ftp-server port (of type int), ie: 21
-		'user'	  =>  SH_UPLOADS_FTP_SERVER_USERNAME,     // * ftp-user, ie: 'username'
-		'pass'	  =>  SH_UPLOADS_FTP_SERVER_PASSWORD,	  // * ftp-password, ie: password'
-		'cdn'     =>  SH_UPLOADS_FTP_SERVER_DOMAIN_NAME,  // * domain or subdomain name to the root of the uploads, ie: 'cdn.example.com'
-		'path'	  =>  SH_UPLOADS_FTP_SERVER_FTP_ROOT_PATH,// - ftp-path, default is root ('/'). 
-								  //     Change here, and add the dir on the ftp-server,
-		'base'	  =>  $upload_dir['basedir']  	          // Basedir on local 
+		'host'	  =>  SH_UPLOADS_FTP_SERVER_IP_OR_HOSTNAME, // * the ftp-server hostname, ie:
+		'port'    =>  SH_UPLOADS_FTP_SERVER_PORT,           // * the ftp-server port (of type int), ie: 21
+		'user'	  =>  SH_UPLOADS_FTP_SERVER_USERNAME,       // * ftp-user, ie: 'username'
+		'pass'	  =>  SH_UPLOADS_FTP_SERVER_PASSWORD,	    // * ftp-password, ie: password'
+		'cdn'     =>  SH_UPLOADS_FTP_SERVER_DOMAIN_NAME,    // * domain or subdomain name to the root of the uploads, ie: 'cdn.example.com'
+		'path'	  =>  SH_UPLOADS_FTP_SERVER_FTP_ROOT_PATH,  // - ftp-path, default is root ('/'). 
+								    //     Change here, and add the dir on the ftp-server,
+		'base'	  =>  $upload_dir['basedir']  	            // Basedir on local 
 	);
 
 
